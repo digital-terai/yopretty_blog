@@ -1,0 +1,168 @@
+.btn {
+	border-width: $button-border-width;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-size: 1em;
+	height: 3em;
+	padding: 0.5em ;
+	line-height: 2em;
+	min-width: 3em;
+	border-radius: $button-border-radius;
+	&:visited {
+		// color: inherit;
+	}
+
+	&:hover,
+	&.focus,
+	&:active,
+	&:active:focus {
+		text-decoration: none;
+		outline: none;
+	}
+
+	&.btn-icon {
+		background-color: $color-secondary;
+		border-color: $color-secondary;
+		border: 0;
+		color: #fff;
+	}
+	&.btn-sm {
+		letter-spacing: 0;
+		font-size: 0.8em;
+	}
+	&.btn-lg {
+		font-size: 1.2em;
+	}
+	&.with-icon {
+		margin: 4px;
+		padding-left: 10px;
+		padding-right: 10px;
+		width: 39px;
+	}
+	i {
+		font-size: 1.2em;
+		width: 1.2em;
+		height: 1em;
+		line-height: 1em;
+		text-align: center;
+	}
+}
+
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+	cursor: not-allowed;
+	pointer-events: none;
+	opacity: 0.65;
+	filter: alpha(opacity=65);
+	box-shadow: none;
+}
+
+.btn-default,
+a.btn-default {
+	color: $color-text-contrast;
+	border-color: $color-4;
+	background-color: $color-4;
+
+	&:visited {color: $color-text-contrast;}
+
+	&:hover,
+	&:focus,
+	&:active,
+	&:active:focus {
+		color: $color-text-contrast;
+		border-color: $color-4;
+		background: darken($color-4, 10);
+	}
+	&.active {
+		color: $color-text-contrast;
+		border-color: $color-accent;
+		background-color: $color-accent;
+
+		&:visited {color: $color-text-contrast;}
+
+		&:hover,
+		&:focus,
+		&:active,
+		&:active:focus {
+			color: $color-text-contrast;
+			border-color: $color-accent;
+			background-color: darken($color-accent, 10);
+		}
+	}
+}
+
+.btn-primary,
+a.btn-primary {
+	color: $color-text-contrast;
+	border-color: $color-primary;
+	background-color: $color-primary;
+
+	&:visited {color: $color-text-contrast;}
+
+	&:hover,
+	&:focus,
+	&:active,
+	&:active:focus {
+		color: $color-text-contrast;
+		border-color: $color-primary;
+		background-color: darken($color-primary, 10);
+	}
+}
+
+.btn-secondary,
+a.btn-secondary {
+	color: $color-text-contrast;
+	border-color: $color-secondary;
+	background-color: $color-secondary;
+
+	&:visited {color: $color-text-contrast;}
+
+	&:hover,
+	&:focus,
+	&:active,
+	&:active:focus {
+		color: $color-text-contrast;
+		border-color: $color-secondary;
+		background-color: darken($color-secondary, 10);
+	}
+}
+
+.btn-accent,
+a.btn-accent {
+	color: $color-text-contrast;
+	border-color: $color-accent;
+	background-color: $color-accent;
+
+	&:visited {color: $color-text-contrast;}
+
+	&:hover,
+	&:focus,
+	&:active,
+	&:active:focus {
+		color: $color-text-contrast;
+		border-color: $color-accent;
+		background-color: darken($color-accent, 10);
+	}
+}
+
+.input-group-btn {
+    position: relative;
+    font-size: 1em;
+    white-space: nowrap;
+}
+
+.uploadifive-button {
+    background-color: #337ab7;
+    background-image: none;
+    background-position: center top;
+    background-repeat: no-repeat;
+    border: 2px solid #337ab7;
+    border-radius: 0px;
+    color: #fff;
+    font: bold 12px  'Open Sans', sans-serif;;
+    text-align: center;
+    text-shadow: none;
+    text-transform: uppercase;
+    width: 100%;
+}

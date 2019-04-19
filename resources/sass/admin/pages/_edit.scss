@@ -1,0 +1,115 @@
+#edit-form-buttons {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+#edit-form {
+	@include breakpoint-up(sm) {
+		.row.form-group {
+			align-items: center;
+			display: flex;
+		}
+	};
+}
+
+#media-edit-form,
+#filemanager-edit-form {
+	label {
+		text-align: left;
+	}
+	.row.form-group {
+		> div {
+			width: 100%;
+		}
+	}
+	button {
+		margin-bottom: 1em;
+	}
+}
+
+#edit-sidebar {
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		> li {
+			> a {
+				display: block;
+				padding: 0.5em 1em;
+				border-radius: $button-border-radius;
+				@include animate();
+				&:hover {
+					// padding-left: 2em;
+					color: $color-accent;
+					background-color: $color-5;
+				}
+				> i {
+					font-size: 1.5em;
+					width: 1em;
+					height: 1em;
+					text-align: center;
+					line-height: 1em;
+					margin-right: 0.5em;
+				}
+			}
+		}
+	}
+}
+
+.language_header {
+	cursor: pointer;
+	margin-top: 1em;
+	padding: 0.5em 1em;
+	background-color: $color-5;
+	border-radius: $border-radius-box;
+	display: flex;
+	align-items: center;
+	@include animate();
+	.flag {
+		margin-right: 0.5em;
+		img {
+			height: 2em;
+		}
+	}
+	.title {
+		font-size: 1.5em;
+		font-weight: 400;
+		@include animate();
+	}
+	i {
+		margin-left: auto;
+		font-size: 1.5em;
+	}
+	&:hover {
+		background-color: $color-accent;
+		.title,
+		i {
+			color: $color-text-contrast;
+		}
+	}
+}
+.language_box {
+	margin-top: 1em;
+}
+
+.media-cont {
+	padding: 10px;
+	background-color: darken($color-background, 3);
+	display: flex;
+	.media-input {
+		flex-grow: 1;
+		margin-right: 10px;
+		.alert {
+			margin: 0;
+		}
+	}
+	.media-saved {
+		display: flex;
+		> .media-delete {
+			margin-left: 10px;
+		}
+	}
+}

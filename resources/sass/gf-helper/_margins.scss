@@ -1,0 +1,11 @@
+/*	MARGINS */
+@for $i from 0 through 10 {
+	$w: $i*$width-base;
+	.mf#{$w} {margin: $w+$width-unit;}
+	.mh#{$w} {margin-left: $w+$width-unit; margin-right: $w+$width-unit;}
+	.mv#{$w} {margin-top: $w+$width-unit; margin-bottom: $w+$width-unit;}
+	.mt#{$w} {margin-top: $w+$width-unit;}
+	.mr#{$w} {margin-right: $w+$width-unit;}
+	.mb#{$w} {margin-bottom: $w+$width-unit;}
+	.ml#{$w} {margin-left: $w+$width-unit;}
+}

@@ -1,0 +1,11 @@
+/*	PADDINGS */
+@for $i from 0 through 10 {
+	$w: $i*$width-base;
+	.pf#{$w} {padding: $w+$width-unit;}
+	.ph#{$w} {padding-left: $w+$width-unit; padding-right: $w+$width-unit;}
+	.pv#{$w} {padding-top: $w+$width-unit; padding-bottom: $w+$width-unit;}
+	.pt#{$w} {padding-top: $w+$width-unit;}
+	.pr#{$w} {padding-right: $w+$width-unit;}
+	.pb#{$w} {padding-bottom: $w+$width-unit;}
+	.pl#{$w} {padding-left: $w+$width-unit;}
+}

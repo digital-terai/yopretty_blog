@@ -1,0 +1,55 @@
+#home-buttons {
+	padding-top: 3em;
+	padding-bottom: 3em;
+	h1 {
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+		> div {
+			margin-top: 10px;
+			@include breakpoint-up(md) {
+				margin-top: 30px;
+			};
+		}
+	}
+	.button {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		padding: 1em;
+		border-radius: $button-border-radius;
+		background-color: $color-primary;
+		i {
+			width: 1em;
+			height: 1em;
+			margin-right: 0.5em;
+			font-size: 2.5em;
+			flex-shrink: 0;
+			color: $color-text-contrast;
+		}
+		h3 {
+			margin-top: 0;
+			color: $color-text;
+			color: $color-text-contrast;
+		}
+		@include animate();
+		&:hover {
+			background-color: $color-accent;
+			@include shadow(4);
+		}
+		@include breakpoint-up(md) {
+			flex-direction: column;
+			i {
+				font-size: 4em;
+				margin-right: 0;
+				margin-bottom: 0.2em;
+			}
+			h3 {
+				text-align: center;
+			}
+		};
+	}
+}

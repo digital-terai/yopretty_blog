@@ -1,0 +1,25 @@
+/*******************************  FLEX *********************/
+
+.flex {
+  @include breakpoint-up(sm) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+} // .flex
+
+.flex-align-center {
+  @include breakpoint-up(sm) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+} // .flex-align-center
+
+.flex-center-all {
+  @include breakpoint-up(sm) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

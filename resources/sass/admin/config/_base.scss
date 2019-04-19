@@ -1,0 +1,59 @@
+html,
+body {
+	color: $color-text;
+	background-color: darken($color-background, 5);
+}
+body {
+	overflow-x: hidden;
+	margin-top: $header-height-mobile;
+	@include breakpoint-up($header-trigger) {
+		margin-top: $header-height;
+	}
+}
+
+main,
+section {
+}
+
+mark {
+	background-color: transparent;
+	color: $color-secondary;
+	padding: 0;
+	display: inline;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color: $color-secondary;
+	mark {
+		color: $color-primary;
+	}
+}
+
+hr {
+    border-top-color: $color-5;
+}
+
+.card {
+	background-color: white;
+	padding: $card-padding;
+	border-radius: $card-radius;
+	@include shadow(1);
+	&.hover {
+		&:hover {
+			@include shadow(4);
+		}
+	}
+	hr {
+		margin-left: -$card-padding;
+		margin-right: -$card-padding;
+		margin-top: $card-padding;
+		margin-bottom: $card-padding;
+	}
+}
+
+.img-thumb {
+	display: block;
+	background-color: $color-background;
+	padding: 0.2em;
+	@include shadow(1);
+}

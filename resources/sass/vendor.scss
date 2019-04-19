@@ -1,0 +1,22 @@
+// Variables
+@import "~bootstrap/dist/css/bootstrap.css";
+/* All of the other imports comes after the bootstrap so we can overwrite it ! */
+
+// Font Awesome
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
+// Material Icons
+//@import "node_modules/material-design-icons/iconfont/material-icons";
+
+// Plugin
+// @import "node_modules/jquery-colorbox/example4/colorbox";
+@import "~@fancyapps/fancybox/dist/jquery.fancybox.min";
+@import "~owl.carousel/dist/assets/owl.carousel.min";
+@import "~smokejs/dist/css/smoke.min";
+@import "~animate.css/animate.min";
+
+// GF plugins
+@import "resources/plugins/pb-overlay/pb-overlay";
+@import "resources/plugins/pb-suggest/pb-suggest";

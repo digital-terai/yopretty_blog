@@ -1,0 +1,24 @@
+#carousel {
+	padding: 0;
+	.slide {
+		position: relative;
+		img {
+			width: 100%;
+			max-width: auto;
+		}
+		.caption {
+			padding: 50px;
+			background-color: white;
+
+			@include breakpoint-up(md) {
+				padding: 0;
+				background-color: transparent;
+				position: absolute;
+				top: 30%;
+				bottom: 20%;
+				left: 20%;
+				right: 50%;
+			}
+		}
+	}
+}

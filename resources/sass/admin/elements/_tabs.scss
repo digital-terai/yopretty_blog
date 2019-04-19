@@ -1,0 +1,62 @@
+.nav-tabs {
+	border: 0;
+	display: flex;
+	margin-bottom: 1em;
+	list-style: none;
+	padding: 0;
+	> li {
+		float: none;
+		margin-right: 0.2em;
+		flex-grow: 1;
+		@include breakpoint-up(sm) {
+			flex-grow: 0;
+		};
+		> a {
+			display: block;
+			border-width: $button-border-width;
+			border-style: solid;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			font-size: 1em;
+			height: 3em;
+			padding: 0.5em;
+			line-height: 2em;
+			min-width: 3em;
+			border-radius: $button-border-radius;
+			margin: 0;
+
+			color: $color-text-contrast;
+			border-color: $color-4;
+			background-color: $color-4;
+
+			&:visited {color: $color-text-contrast;}
+
+			&:hover,
+			&:focus,
+			&:active,
+			&:active:focus {
+				color: $color-text-contrast;
+				border-color: $color-4;
+				background: darken($color-4, 10);
+			}
+		}
+		&.active {
+			> a {
+				color: $color-text-contrast;
+				border-color: $color-accent;
+				background-color: $color-accent;
+
+				&:visited {color: $color-text-contrast;}
+
+				&:hover,
+				&:focus,
+				&:active,
+				&:active:focus {
+					color: $color-text-contrast;
+					border-color: $color-accent;
+					background-color: darken($color-accent, 10);
+				}
+			}
+		}
+	}
+}

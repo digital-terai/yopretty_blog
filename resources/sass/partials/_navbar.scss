@@ -1,0 +1,221 @@
+// bootstrap navbar trigger override
+@include breakpoint-down($navbar-trigger) {
+	.navbar-header {
+		float: none;
+	}
+	.navbar-left, .navbar-right {
+		float: none !important;
+	}
+	.navbar-toggle {
+		display: block;
+	}
+	.navbar-collapse {
+		border-top: 1px solid transparent;
+		box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+		&.collapse {
+			display: none !important;
+		}
+	}
+	.navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+	.navbar-nav {
+		float: none !important;
+		margin-top: 7.5px;
+	}
+	.navbar-nav > li {
+		float: none;
+		> a {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+	}
+	.collapse.in{
+		display:block !important;
+	}
+}
+
+.navbar {
+	font-family: $font-family-title;
+	background-color: white;
+	color: $color-text;
+	padding-top: $navbar-height-padding-mobile;
+	padding-bottom: $navbar-height-padding-mobile;
+	border: 0;
+
+	@include breakpoint-up($navbar-trigger) {
+		padding-top: $navbar-height-padding;
+		padding-bottom: $navbar-height-padding;
+	}
+
+	.container,
+	.container-fluid {
+		.navbar-header {
+			margin-left: 0;
+			margin-right: 0;
+
+			.navbar-brand {
+				margin-left: 0;
+				height: auto;
+				padding: 0;
+				height: $navbar-height-content-mobile;
+				@include breakpoint-up($navbar-trigger) {
+					height: $navbar-height-content;
+				}
+				> img {
+					height: $navbar-height-content-mobile;
+					@include breakpoint-up($navbar-trigger) {
+						height: $navbar-height-content;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.navbar-nav {
+	.open {
+		.dropdown-menu {
+			background-color: white;
+		}
+	}
+	> li {
+		@include breakpoint-up($navbar-trigger) {
+			margin: $navbar-item-margin;
+		};
+		> a {
+			padding: $navbar-item-padding;
+			line-height: $navbar-height-content-mobile;
+			@include breakpoint-up($navbar-trigger) {
+				line-height: $navbar-height-content;
+			}
+			.flag {
+				height: $navbar-height-content-mobile * 0.5;
+				vertical-align: middle;
+				@include breakpoint-up($navbar-trigger) {
+					height: $navbar-height-content * 0.5;
+				}
+			}
+		}
+
+		.dropdown-menu {
+			margin-top: $navbar-height-padding-mobile;
+			@include breakpoint-up($navbar-trigger) {
+				margin-top: $navbar-height-padding;
+			}
+			.flag {
+				height: $navbar-height-content-mobile * 0.5;
+				@include breakpoint-up($navbar-trigger) {
+					height: $navbar-height-content * 0.5;
+				}
+				vertical-align: middle;
+			}
+		}
+	}
+}
+
+.nav > li {
+	// current page item
+	&.active > a {
+		background-color: transparentize($color-secondary, 0.5);
+		color: $color-text-contrast;
+	}
+	// hovering
+	a:hover,
+	a:focus {
+		background-color: $color-primary;
+		color: $color-text-contrast;
+	}
+	// opened dropdown
+	&.open > a,
+	&.open > a:hover,
+	&.open > a:focus {
+		background-color: transparentize($color-primary, 0.5);
+		color: $color-text-contrast;
+	}
+}
+
+.navbar-fixed-top {
+	.navbar-collapse {
+		max-height: 300px;
+	}
+}
+
+.navbar-toggle {
+	padding: 0;
+	line-height: $navbar-height-content-mobile;
+	width: $navbar-height-content-mobile;
+	margin: 0;
+	border-radius: 0;
+	border: 0;
+	@include animate();
+
+	&:hover {
+		background-color: $color-primary;
+		color: $color-text-contrast;
+	}
+}
+
+.dropdown-menu {
+	border: 0;
+	box-shadow: none;
+	padding: 0;
+	border-radius: 0;
+	font-size: 1em;
+	> li {
+		> a {
+			padding: 0 15px;
+			line-height: 3em;
+			> i {
+				width: 1em;
+				margin-right: 0.5em;
+				text-align: center;
+			}
+		}
+	}
+	.divider {
+		margin: 0;
+		background-color: $color-5;
+	}
+}
+
+.call-action {
+	float: right;
+	margin-right: 10px;
+	height: $navbar-height-content-mobile;
+	width: $navbar-height-content-mobile;
+	text-align: center;
+	@include animate();
+	> i {line-height: $navbar-height-content-mobile;}
+	@include breakpoint-up($navbar-trigger) {display: none;};
+
+	&:hover {
+		background-color: $color-primary;
+		> i {color: $color-text-contrast;}
+	}
+}
+
+.cart-icon {
+	font-size: 1.5em;
+}
+
+.cart-count {
+	position: absolute;
+	top: 5%;
+	right: 5%;
+	min-width: 1.5em;
+	height: 1.5em;
+	line-height: 1.5em;
+	font-weight: 700;
+	font-size: 1.1em;
+	padding: 0 0.3em;
+	text-align: center;
+	color: $color-text;
+	background-color: $color-accent;
+	border-radius: 128px;
+	&:empty {
+		display: none;
+	}
+}

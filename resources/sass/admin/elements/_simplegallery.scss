@@ -1,0 +1,33 @@
+#simpleGallery, #simpleDocGallery {
+    overflow: hidden;
+    display: block;
+    margin: 0px -10px;
+    padding: 0px;
+	display: flex;
+	list-style: none;
+	flex-wrap: wrap;
+	li {
+		padding: 10px;
+		text-align: center;
+		float: left;
+		margin: 10px;
+		border-radius: 0;
+		cursor: move;
+		img {
+			width: 100%;
+			margin: 0.5em 0;
+		}
+		@include animate();
+		&:hover {
+			border-color: $color-accent; 
+		}
+	}
+	.actions {
+		display: flex;
+		justify-content: space-between;
+	}
+	.caption {
+		font-weight: bold;
+		text-align: center;
+	}
+}

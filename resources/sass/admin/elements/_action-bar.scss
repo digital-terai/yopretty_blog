@@ -1,0 +1,17 @@
+#action-bar {
+	background-color: $color-5;
+	padding: 1em;
+	margin-bottom: 1em;
+	display: flex;
+	flex-wrap: wrap;
+	i {
+		margin: 0;
+	}
+	> .actions {
+		margin-left: auto;
+		display: flex;
+		> a {
+			margin-left: 0.2em;
+		}
+	}
+}

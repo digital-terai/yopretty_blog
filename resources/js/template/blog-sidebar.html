@@ -1,0 +1,9 @@
+<div>
+    <h2 class="blog__sidebar__title">Latest news</h2>
+    <div v-if="sideElements && sideElements.length" >
+        <div v-for="post of sideElements" class="blog__sidebar__items mb15 pb15 border-bottom-color-5">
+            <h6 class="blog__sidebar__items__posted">{{post.date}}</h6>
+            <a  :href="'/blog/'+post.slug" class="blog__sidebar__items__link">{{post.title}}</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+#pbov_main {
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+	z-index: 1000;
+	display: none;
+}
+
+#pbov_background {
+	background-color: rgba(255,255,255,0.7);
+	height: 100%;
+	width: 100%;
+}
+
+#pbov_wrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	border-radius: 10px;
+	padding: 50px;
+	background-color: white;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#pbov_icon {
+	display: block;
+	font-size: 5em;
+	line-height: 1;
+	margin-bottom: 30px;
+}
+
+#pbov_text {
+	margin-bottom: 20px;
+}
+
+.pbov_button {
+	margin: 0 5px;
+}

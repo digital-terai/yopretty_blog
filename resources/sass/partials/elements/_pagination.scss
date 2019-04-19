@@ -1,0 +1,39 @@
+/***********  PAGER  ******************/
+.pagination {
+	> li {
+		> a,
+		> span {
+			color: $color-text;
+			border: 0;
+		    padding: 0 10px;
+		    line-height: 2.5em;
+			min-width: 2.5em;
+		    margin-left: 0;
+			text-align: center;
+
+			&:hover,
+			&:focus {
+				background-color: transparentize($color-secondary, 0.75);
+				color: $color-text;
+			}
+		}
+		&:first-child,
+		&:last-child {
+			> a,
+			> span {
+				border-radius: 0;
+			}
+		}
+	}
+	.active {
+		> a,
+		> a:hover,
+		> a:focus,
+		> span,
+		> span:hover,
+		> span:focus {
+			background-color: $color-primary;
+			color: $color-text-contrast;
+		}
+	}
+}

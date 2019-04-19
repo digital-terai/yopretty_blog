@@ -1,0 +1,26 @@
+<div>
+     <div v-if="items && items.length" class="row" >
+        <div class="col-md-12 mb25" v-for="post of items">
+            <div class="item">
+                <div class="item__posted">
+                    Posted: <span class="color-4">{{post.date}}</span>
+                </div>
+                <div class="item__body" >
+                    <h2 class="item__title" > {{post.title}}</h2>
+                    <span v-html="post.description"></span>
+                </div>
+                <div v-if="post.image" class="item__img" >
+                    <img :src="'/public/media/images/'+post.image">
+                </div>
+                <a  v-if="post.link"  :href="post.link"  class="item__link"><i class="fa fa-link fa-1x"></i> {{post.link}}</a>
+            </div>
+        </div><!--/news -->
+    </div>
+    <paginator   :dataSet="dataSet" @changed="fetchData"></paginator>
+
+    <ul v-if="errors && errors.length">
+        <li v-for="error of errors">
+            {{error.message}}
+        </li>
+    </ul>
+</div>

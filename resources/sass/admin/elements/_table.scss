@@ -1,0 +1,44 @@
+.table-responsive {
+	margin: -1px;
+}
+.admin-table {
+	border-collapse: collapse;
+	width: 100%;
+	text-align: center;
+	thead {
+		background-color: $table-head-background;
+		color: $table-head-color;
+		th, td {
+			padding: $table-head-cell-padding;
+		}
+	}
+	tbody {
+		@if $table-alternate-rows {
+			tr {
+				&:nth-child(odd) {
+					background-color: $table-body-row-odd;
+				}
+				&:nth-child(even) {
+					background-color: $table-body-row-even;
+				}
+			}
+		}
+		th, td {
+			padding: $table-body-cell-padding;
+		}
+	}
+	th, td {
+		border: $table-border-width solid $table-border-color;
+	}
+	th {
+		text-align: center;
+		white-space: nowrap;
+		i {
+			color: $color-accent;
+		}
+	}
+
+	.form-control {
+		max-width: 100%;
+	}
+}

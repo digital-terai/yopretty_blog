@@ -1,0 +1,47 @@
+#main-list {
+	h2 {
+		i {
+			font-size: 1.3em;
+			@include square-icon;
+			margin-right: 0.5em;
+		}
+	}
+	.table-container {
+		background-color: white;
+		border-radius: $card-radius;
+		overflow: hidden;
+		@include shadow(1);
+	}
+	.selectable-column {
+		width: 0.01px;
+		input {
+			margin: 0;
+		}
+	}
+	.img-thumb {
+		margin: 0 auto;
+	}
+}
+
+.list-actions {
+	white-space: nowrap;
+}
+
+.bool-toggle {
+	span {
+		cursor: pointer;
+		height: 2em;
+		min-width: 2em;
+		line-height: 2em;
+		padding: 0 0.5em;
+		border-radius: 128px;
+		display: inline-block;
+		color: $color-text-contrast;
+		&.bool-on {
+			background-color: $color-true;
+		}
+		&.bool-off {
+			background-color: $color-false;
+		}
+	}
+}

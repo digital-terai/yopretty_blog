@@ -1,0 +1,11 @@
+#sortable li {
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+#sortable li:nth-child(odd) {
+    background: #BDBDAE;
+}
+
+#sortable li:nth-child(even) {
+}

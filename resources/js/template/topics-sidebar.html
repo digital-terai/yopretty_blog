@@ -1,0 +1,7 @@
+<div class="mt15">
+    <ul v-if="topicElements && topicElements.length" class="list-inline topic">
+        <li v-for="topic in sortedTags" class="topic__item">
+            <a  :href="'/blog/tags/'+topic.slug" class="topic__item__link">{{topic.title | pinoFilter}}</a>
+        </li>
+    </ul>
+</div>

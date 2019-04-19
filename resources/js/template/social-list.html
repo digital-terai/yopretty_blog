@@ -1,0 +1,13 @@
+<ul v-if="socialElements && socialElements.length"
+        class="socialIcons list-inline  text-center text-sm-right back-color-main justify-content-end">
+    <li class="list-inline-item" v-for="social of socialElements">
+        <a
+           :href="social.link" target="_new" rel="noopener">
+            <span class="fa-stack fa-lg transitioned">
+                <i class="fa fa-circle fa-stack-2x color-6 transitioned"></i>
+                <i :class="'fa  fa-stack-1x fa-inverse color-2 transitioned '+social.icon"></i>
+            </span>
+        </a>
+    </li>
+</ul>
+

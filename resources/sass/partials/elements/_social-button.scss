@@ -1,0 +1,26 @@
+/* ====== ELEMENTS ======= */
+
+.socialIcons {
+	text-align: right;
+
+	> li > a {
+		height: $social-button-size;
+		width: $social-button-size;
+		display: inline-block;
+		text-align: center;
+		color: $color-text-contrast;
+		background-color: $color-primary;
+		border-radius: 50%;
+		@include animate();
+
+		> i {
+			line-height: $social-button-size;
+		}
+
+		&:hover {
+			text-decoration: none;
+			background-color: $color-accent;
+			color: $color-text;
+		}
+	}
+}

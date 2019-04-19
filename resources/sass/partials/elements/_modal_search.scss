@@ -1,0 +1,209 @@
+#fsModalSearch {
+  &.modal {
+    position: fixed;
+    top: 0px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    border: 0px;
+  }
+  .modal-dialog {
+    position: fixed;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background: rgba(0, 0, 0, .7) !important;
+    @include breakpoint-up($navbar-trigger) {
+      height: 80%;
+    }
+  }
+  .modal-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 0px solid #3c7dcf;
+    border-bottom: 0px solid rgba(33, 91, 184, .8);
+    border-radius: 0;
+    box-shadow: none;
+    background: rgba(33, 91, 184, .8) !important;
+    color: white;
+  }
+  .modal-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 70px;
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+    border: 0;
+
+    .close {
+      color: white;
+      opacity: 1;
+      font-size: 1rem;
+      @include breakpoint-up($navbar-trigger) {
+        font-size: 1.5rem;
+      }
+    }
+    .search-group {
+
+    }
+    .search-label {
+      margin: 0;
+      margin-top: 0.8rem;
+      margin-right: 0.5rem;
+      font-size: 1.8rem;
+      @include breakpoint-up($navbar-trigger) {
+        font-size: 2.0rem;
+      }
+    }
+    .search-input {
+      border: 0px;
+      background-color: transparent;
+      padding: 5px 0px;
+      border-bottom: 1px solid rgba(255, 255, 255, .4);
+      width: 85%;
+      font-size: 1.8rem;
+      position: relative;
+      vertical-align: top;
+      @include breakpoint-up($navbar-trigger) {
+        font-size: 2.0rem;
+        width: 60%;
+      }
+      &:focus {
+        border: 0px;
+        border-bottom: 1px solid rgba(255, 255, 255, .7);
+        outline: none;
+      }
+    }
+    .search-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: rgba(255, 255, 255, .7);;
+    }
+    .search-input::-moz-placeholder { /* Firefox 19+ */
+      color: rgba(255, 255, 255, .7);;
+    }
+    .search-input:-ms-input-placeholder { /* IE 10+ */
+      color: rgba(255, 255, 255, .7);;
+    }
+    .search-input:-moz-placeholder { /* Firefox 18- */
+      color: rgba(255, 255, 255, .7);;
+    }
+  }
+
+  .modal-body {
+    position: absolute;
+    top: 60px;
+    bottom: 60px;
+    width: 100%;
+    font-weight: 300;
+    overflow: auto;
+    padding-top: 0px;
+    @include breakpoint-up($navbar-trigger) {
+      top: 70px;
+    }
+    .search-result {
+      position: relative;
+      width: 70%;
+      .search-item {
+        margin-bottom: 0.2rem;
+      }
+    }
+
+    .search-item-full {
+      float: left;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom:0.5rem;
+      ;
+      &:hover {
+        background: rgba(33, 91, 184, 1) !important;
+      }
+    }
+
+
+    .search-item-txt {
+      float: left;
+      width: calc(100% - 130px);
+      padding: 0px 10px;
+      font-size: 1.4rem;
+      a {
+        width:99%;
+        display:block;
+      }
+    }
+
+    .search-item-img {
+      float: left;
+      width: 50px;
+
+    }
+    .search-item-input {
+      float: left;
+      width: 80px;
+      padding: 5px 0px;
+      .qty {
+        width: 100%;
+        height: 34px;
+        padding: 3px 6px;
+        font-size: 14px;
+        line-height: 1.6;
+        color: #303030;
+        background-color: white;
+        background-image: none;
+        border: 0px solid #e0e0e0;
+        border-radius: 0;
+        box-shadow: none;
+        transition: none;
+      }
+      .btn-add {
+        border: 1px solid transparent;
+        white-space: nowrap;
+        padding: 5px 6px;
+        font-size: 14px;
+        line-height: 1.6;
+        background:#f6b000;
+        color:white;
+        &:hover {
+
+          background:#f6b000;
+          color:white;
+
+        }
+      }
+    }
+  }
+
+  .modal-footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    padding: 10px;
+    background: black;
+    text-align: center;
+    color: white;
+    border-top: 0px;
+    .searched-word-box {
+      display: none;
+      font-weight: normal;
+
+    }
+    .search-string {
+      color: rgba(33, 91, 184, 1);
+      font-weight: bold;
+    }
+  }
+}
+
+.modal-backdrop.in {
+  opacity: 0.1;
+}

@@ -1,0 +1,65 @@
+/*	colors	*/
+
+$color-background:		white;
+
+$color-text:			#303030;
+$color-text-contrast:	#ffffff; // used in contrast with primary and secondary color
+
+$color-primary:			#000000;
+$color-secondary:		#d30535;
+$color-accent:			#3c9edd;
+$color-4:				#c0c0c0;
+$color-5:				#e0e0e0;
+
+$color-true:			#67cd7a;
+$color-false:			#d75c4b;
+
+/*	font families	*/
+
+$font-family-text: 		"Roboto", sans-serif;
+$font-family-title: 	"Roboto", sans-serif;
+$font-family-subtitle: 	"Roboto", sans-serif;
+$font-family-icons:		"Font Awesome\ 5 Free";
+
+/*	navbar 	*/
+$header-trigger: 'sm';
+$header-height: 60px;
+$header-height-content: 50px;
+$header-height-padding: ($header-height - $header-height-content) / 2;
+$header-height-mobile: 50px;
+$header-height-content-mobile: 40px;
+$header-height-padding-mobile: ($header-height-mobile - $header-height-content-mobile) / 2;
+
+$header-item-padding: 0.5em 1em;
+$header-item-margin: 0 0;
+
+/*	forms	*/
+$form-control-border-radius: 3px;
+$form-control-border-size: 1px;
+$form-control-border-color: $color-5;
+$form-control-border-color-hover: $color-primary;
+$form-control-placeholder-color: $color-4;
+
+/*	buttons: ;*/
+$button-border-radius:	3px;
+$button-border-width:	1px;
+
+/*	cards	*/
+$card-radius: 5px;
+$card-padding: 1em;
+
+/*	tables	*/
+$table-border-width: 1px;
+$table-border-color: rgba($color-4, 0.5);
+$table-head-background: $color-primary;
+$table-head-color: $color-text-contrast;
+$table-head-cell-padding: 0.5em 1em;
+$table-body-cell-padding: 0.3em 0.5em;
+$table-alternate-rows: true;
+$table-body-row-odd: white;
+$table-body-row-even: darken(white, 3);
+
+
+
+/*	misc	*/
+$border-radius-box:	5px;

@@ -1,0 +1,42 @@
+body {
+	font-size: 13px;
+	line-height: 1.4;
+	font-family: $font-family-text;
+	@include breakpoint-up(sm) {font-size: 14px;}
+	@include breakpoint-up(md) {font-size: 15px;}
+	@include breakpoint-up(lg) {font-size: 16px;}
+}
+
+h1 {font-size: 2em;}
+h2 {font-size: 1.7em;}
+h3 {font-size: 1.4em;}
+h4 {font-size: 1.2em;}
+h5 {font-size: 1.1em;}
+h6 {font-size: 1em;}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-family-title;
+	margin: 1em 0 0.5em;
+	font-weight: 700;
+	&:first-child {margin-top: 0;}
+	&:last-child {margin-bottom: 0;}
+}
+
+ul, ol, p {
+	margin-bottom: 0.5em;
+	&:last-child {margin-bottom: 0;}
+}
+
+ul, ol {
+	padding-left: 2em;
+}
+
+pre,
+code {
+	font-family: "Lucida Console", Monaco, monospace;
+}
+
+label {
+	margin-bottom: 0.5em;
+	font-weight: 700;
+}

@@ -1,0 +1,11 @@
+.alert {
+	border-radius: 0;
+	border: 0;
+	position: relative;
+	.close {
+		position: absolute;
+		float: none;
+		top: 15px;
+		right: 15px;
+	}
+}

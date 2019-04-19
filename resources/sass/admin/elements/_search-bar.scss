@@ -1,0 +1,16 @@
+#search-bar {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0.75em 1em;
+	> div {
+		width: 100%;
+		margin-top: 0.25em;
+		margin-bottom: 0.25em;
+		@include breakpoint-up('sm') {
+			margin-right: 0.5em;
+			flex-grow: 1;
+			width: 150px;
+			max-width: 200px;
+		};
+	}
+}
